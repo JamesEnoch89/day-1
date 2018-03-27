@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ScoreBoardAng</title>
-    <link rel="stylesheet" href="/screen.css">
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
-  </body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TeamScore</title>
+  <link rel="stylesheet" href="./screen.css">
+</head>
+
+<body ng-app="scoreBoardPage" ng-controller="mainController">
+  <section class="header">
+    <h1>My Score Board</h1>
+  </section>
+
+  <section class="team-container">
+    <section>
+      <h2>{{renamedteam1}}</h2>
+    </section>
+    <section class="team-two-name">
+      <h2>{{renamedteam2}}</h2>
+    </section>
+  </section>
+
+
+
+  <section class="name-update-container">
+    <section class="team-one-info">
+      <span>Update Team 1 Name</span>
+      <input type="text" ng-model="rename1">
+      <button ng-click="updatet1()">Update</button>
+      <br> Update Team 1 Score
+      <button ng-click="t1add1()">Add 1</button>
+      <button ng-click="t1sub1()">Subtract 1</button>
+    </section>
+
+    <section class="team-two-info">
+      <span>Update Team 2 Name</span>
+      <input type="text" name="" id="" ng-model="rename2">
+      <button ng-click="updatet2()">Update</button>
+      <br> Update Team 2 Score
+      <button ng-click="t2add1()">Add 1</button>
+      <button ng-click="t2sub1()">Subtract 1</button>
+    </section>
+  </section>
+
+<section class="score-update-container">
+  <section class="team1scoreContainer">
+    <h1>{{renamedTeam1}}'s score is {{teamOneScore}}</h1>
+  </section>
+
+  <section class="team2scoreContainer">
+    <h1>{{renamedTeam2}}'s score is  {{teamTwoScore}}</h1>
+  </section>
+</section>
+
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+</body>
+
 </html>
